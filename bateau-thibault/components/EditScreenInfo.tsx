@@ -1,52 +1,91 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { Button, Linking, StyleSheet, ImageBackground } from 'react-native';
 
 import Colors from '../constants/Colors';
-import { ExternalLink } from './ExternalLink';
 import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 export default function EditScreenInfo({ path }: { path: string }) {
   return (
-    <View>
       <View style={styles.getStartedContainer}>
         <Text
           style={styles.getStartedText}
           lightColor="rgba(0,0,0,0.8)"
-          darkColor="rgba(255,255,255,0.8)">
-          Open up the code for this screen:
+          darkColor="rgba(255,255,255,0.8)"
+          >
+          Vente en direct de notre bateau{"\n"}
+          Produits selon la saison, Livraisons sur Paris{"\n"}
         </Text>
 
         <View
           style={[styles.codeHighlightContainer, styles.homeScreenFilename]}
           darkColor="rgba(255,255,255,0.05)"
-          lightColor="rgba(0,0,0,0.05)">
-          <MonoText>{path}</MonoText>
+          lightColor="rgba(0,0,0,0.05)"
+          >
+          <Text onPress={() => Linking.openURL("tel:+330663999978")}>Téléphone</Text>
+          <Text onPress={() => Linking.openURL("https://www.facebook.com/lebateaudethibault")}>Facebook</Text>
+          <Text onPress={() => Linking.openURL("mailto:lebateaudethibault@gmail.com")}>Contact</Text>
         </View>
 
-        <Text
-          style={styles.getStartedText}
-          lightColor="rgba(0,0,0,0.8)"
-          darkColor="rgba(255,255,255,0.8)">
-          Change any of the text, save the file, and your app will automatically update.
-        </Text>
-      </View>
+        <SafeAreaView style={styles.container}>
+          <View style={styles.fixToText}>
+            <Button 
+              onPress={() => console.log("Clicked")}
+              title="Produits et promotions"
+              color="#841584"
+              accessibilityLabel="Learn more about this purple button"
+            />
+            <Button
+              title="Bateaux"
+              color="#841584"
+              accessibilityLabel="Learn more about this purple button"
+            />
+            <Button
+              title="Restaurants"
+              color="#841584"
+              accessibilityLabel="Learn more about this purple button"
+            />
+            <Button
+              title="Recettes"
+              color="#841584"
+              accessibilityLabel="Learn more about this purple button"
+            />
+            <Button
+              title="Contact"
+              color="#841584"
+              accessibilityLabel="Learn more about this purple button"
+            />
+          </View>
+        </SafeAreaView>
 
-      <View style={styles.helpContainer}>
-        <ExternalLink
-          style={styles.helpLink}
-          href="https://docs.expo.io/get-started/create-a-new-app/#opening-the-app-on-your-phonetablet">
-          <Text style={styles.helpLinkText} lightColor={Colors.light.tint}>
-            Tap here if your app doesn't automatically update after making changes
-          </Text>
-        </ExternalLink>
       </View>
-    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 2,
+    justifyContent: 'center',
+    marginHorizontal: 16,
+    borderColor: 'red',
+    borderWidth: 3,
+  },
+  title: {
+    textAlign: 'center',
+    marginVertical: 8,
+  },
+  fixToText: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  separator: {
+    marginVertical: 8,
+    borderBottomColor: '#737373',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+  },
+
   getStartedContainer: {
     alignItems: 'center',
     marginHorizontal: 50,
