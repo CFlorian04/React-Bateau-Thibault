@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, Linking, StyleSheet, ImageBackground } from 'react-native';
 
-import Colors from '../constants/Colors';
 import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
 import { SafeAreaView } from 'react-native-safe-area-context';
