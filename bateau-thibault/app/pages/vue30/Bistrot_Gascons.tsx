@@ -8,6 +8,8 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { styles } from "./Bistrot_Gascons.style";
+import Poème from "../../modèles/poème";
+
 const Bistrot_Gascons = () => {
   return (
     <ImageBackground
@@ -15,7 +17,7 @@ const Bistrot_Gascons = () => {
       style={styles.backgroundImage}
     >
       <View style={styles.container}>
-        <Text style={styles.text}>Bistrol des Gascons</Text>
+        <Text style={styles.text}>Bistrot des Gascons</Text>
       </View>
       <View style={styles.View_Image}>
         <Image
@@ -23,19 +25,8 @@ const Bistrot_Gascons = () => {
           source={require("../../../assets/images/desGascons.png")}
         />
       </View>
-      <View style={styles.view2}>
-        <Text style={styles.text1}>XXX YYY ZZZ</Text>
-        <Text style={styles.text2}>Qu'il est chaus le soeil</Text>
-        <Text style={styles.text3}>Quand nous sommes en vacances</Text>
-        <Text style={styles.text4}>Y a d'la joie,des hironéelles</Text>
-        <Text style={styles.text5}>C'est le sud de la France</Text>
-        <Text style={styles.text6}>Ppa bricole au garage</Text>
-        <Text style={styles.text7}>Maman est dans la chaise longue</Text>
-        <Text style={styles.text8}>Dans ce joli paysage</Text>
-        <Text style={styles.text9}>Moi,je me balade en tongs</Text>
-        <Text style={styles.text10}>Que de bonheur!</Text>
-        <Text style={styles.text10}>Que de bonheur!</Text>
-      </View>
+      
+      <Poème></Poème>
     </ImageBackground>
   );
 };

@@ -109,4 +109,18 @@ export const styles = StyleSheet.create({
     width: 400,
     height: 320,
   },
+
+  poème: {
+    marginVertical: 50,
+    fontSize: 16,
+    color: "#000000",
+    fontWeight: "300",
+    fontStyle: "italic",
+    textAlign: 'center',
+  },
+
+  bottomView: {
+    flexDirection: "column",
+  },
+  
 });

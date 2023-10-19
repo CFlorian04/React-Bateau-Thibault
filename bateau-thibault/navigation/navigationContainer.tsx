@@ -8,22 +8,16 @@ import Fous_lile from "../app/pages/vue31/Fous_lile";
 import Bist_Londs from "../app/pages/vue32/Bist_Londs";
 import Vill_Trois from "../app/pages/vue33/Vill_Trois";
 import Bist_Somm from "../app/pages/vue34/Bist_Somm";
-import Bateau_thiab from "../app/pages/vue1/Bateau_thiab";
+import Contact from "../app/pages/vue1/contact";
 import HomePage from "../app/pages/vue0/home";
-import Contact from "../app/pages/contact/contact";
 const Stack = createNativeStackNavigator();
 const NavigationContainerStack = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-        }}
-      >
+      <Stack.Navigator screenOptions={{headerShown: false, }}>
         <Stack.Screen name="vue0" component={HomePage}/>
         <Stack.Screen name="contact" component={Contact}/>
         <Stack.Screen name="vue3" component={RestPartun} />
-        <Stack.Screen name="vue1" component={Bateau_thiab} />
         <Stack.Screen name="vue30" component={Bistrot_Gascons} />
         <Stack.Screen name="vue31" component={Fous_lile} />
         <Stack.Screen name="vue32" component={Bist_Londs} />

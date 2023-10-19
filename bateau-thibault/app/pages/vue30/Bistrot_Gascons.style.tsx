@@ -10,6 +10,21 @@ export const styles = StyleSheet.create({
     top: 80,
     left: 55,
   },
+
+  poème: {
+    marginVertical: 50,
+    fontSize: 16,
+    color: "#000000",
+    fontWeight: "300",
+    fontStyle: "italic",
+    textAlign: 'center',
+  },
+
+  bottomView: {
+    flexDirection: "column",
+  },
+
+  
   text: {
     fontSize: 32,
     color: "white",

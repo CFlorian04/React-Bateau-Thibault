@@ -1,5 +1,6 @@
 import { ImageBackground, SafeAreaView, View, Text, Button, StyleSheet, Linking} from "react-native"
 import { useNavigation } from "@react-navigation/native";
+import Liens from "../../modèles/liens";
 
 const Row = ({ children }) => (
     <View style={styles.row}>{children}</View>
@@ -24,13 +25,11 @@ const HomePage = () => {
             <Text style={styles.title}>Le bateau de Thibault</Text>
             
             <SafeAreaView style={styles.quarter}>
-            <Text style={styles.getStartedText}>
-                Vente en direct de notre bateau{"\n"}
-                Produits selon la saison, Livraisons sur Paris{"\n"}
-            </Text>
-            <Text style={styles.links} onPress={() => Linking.openURL("tel:+330663999978")}>Téléphone</Text>
-            <Text style={styles.links} onPress={() => Linking.openURL("https://www.facebook.com/lebateaudethibault")}>Facebook</Text>
-            <Text style={styles.links} onPress={() => Linking.openURL("mailto:lebateaudethibault@gmail.com")}>Contact</Text>
+              <Text style={styles.getStartedText}>
+                  Vente en direct de notre bateau{"\n"}
+                  Produits selon la saison, Livraisons sur Paris{"\n"}
+              </Text>
+              <Liens></Liens>
             </SafeAreaView>
         </SafeAreaView>
 
@@ -73,28 +72,15 @@ const HomePage = () => {
         // toute la page
         main_container: {
           flex: 1,
-          // delete
-          // borderColor: 'red',
-          // borderWidth: 3,
-          // borderStyle: 'solid',
         },
       
       
         child_container: {
-          // delete
           flex: 1,
-          // borderColor: 'blue',
-          // borderWidth: 3,
-          // borderStyle: 'solid',
         },
       
         quarter: {
-          flex: 1,
-      
-          // borderColor: 'green',
-          // borderWidth: 3,
-          // borderStyle: 'solid',
-      
+          flex: 1,      
           paddingVertical: 50,
         },
       
@@ -115,7 +101,6 @@ const HomePage = () => {
         "2col": {
           flex: 2,
         },
-      
         // end testing
       
         title: {
@@ -124,10 +109,6 @@ const HomePage = () => {
           textAlign: 'center',
           color: 'white',
           paddingVertical: 50,
-      
-          // borderColor: 'purple',
-          // borderWidth: 3,
-          // borderStyle: 'solid',
         },
       
         links: {
@@ -139,16 +120,6 @@ const HomePage = () => {
           flex: 1,
           justifyContent: 'center',
         },
-      
-        // Test uniquement
-        // text: {
-        //   color: 'white',
-        //   fontSize: 42,
-        //   lineHeight: 84,
-        //   fontWeight: 'bold',
-        //   textAlign: 'center',
-        //   backgroundColor: '#000000c0',
-        // },
         codeHighlightContainer: {
           borderRadius: 3,
           paddingHorizontal: 4,
@@ -159,7 +130,6 @@ const HomePage = () => {
         },
         
         getStartedText: {
-          // flex: 1,
           fontSize: 17,
           lineHeight: 24,
           textAlign: 'center',

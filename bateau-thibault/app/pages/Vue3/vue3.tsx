@@ -2,6 +2,11 @@ import React, { Component, useEffect } from "react";
 import { ImageBackground, Text, TouchableOpacity, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { styles } from "./vue3.style";
+
+import Liens from "../../modèles/liens";
+
+          {/* Todo Corriger la feuille de style de cette page */}
+
 const RestPartun = () => {
   const navigation = useNavigation();
     return (
@@ -10,15 +15,15 @@ const RestPartun = () => {
         style={styles.backgroundImage}
       >
         <View style={styles.container}>
-          <Text style={styles.text}>Restaurantes partenaires</Text>
+          <Text style={styles.text}>Restaurants partenaires</Text>
         </View>
         <View style={styles.view2}>
           <Text style={styles.text1}>
-            Tous les Restaurantes partenaires avec le bateau de Thibault
+            Tous les Restaurants partenaires avec le bateau de Thibault
           </Text>
-          <Text style={styles.text2}>06.63.99.99.78</Text>
-          <Text style={styles.text3}>labateaudethibault@gamil.com</Text>
-          <Text style={styles.text4}>www.facebook.com/labateaudethibault</Text>
+
+          <Liens></Liens>
+
         </View>
         <View style={styles.View_Butth}>
           <View style={{ flexDirection: "row" }}>
@@ -35,7 +40,7 @@ const RestPartun = () => {
               onPress={() => navigation.navigate("vue31")}
             >
               <View style={styles.view_text_Button}>
-                <Text style={styles.text_Button}>Les fous de l'ile</Text>
+                <Text style={styles.text_Button}>Les fous de l'île</Text>
               </View>
             </TouchableOpacity>
           </View>
@@ -67,7 +72,7 @@ const RestPartun = () => {
               </View>
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={() => navigation.navigate("vue1")}
+              onPress={() => navigation.navigate("contact")}
               style={styles.Butt_BistGas2}
             >
               <View style={styles.view_text_Button}>
