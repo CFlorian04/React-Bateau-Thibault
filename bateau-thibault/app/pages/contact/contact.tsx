@@ -6,3 +6,5 @@ const Contact = () => (
     <View>Vide</View>
 
   );
+
+  export default Contact;
