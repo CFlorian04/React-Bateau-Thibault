@@ -1,8 +1,7 @@
 import { SafeAreaView, View, Text, StyleSheet} from "react-native"
 
 import Background from "../../modèles/background";
-import Title from "../../modèles/title";
-import Restaurant from "../../modèles/restaurant";
+import Restaurant from "../../modèles/présentation";
 
 const Homard = () => {
 
@@ -12,14 +11,17 @@ const Homard = () => {
                     <SafeAreaView style={styles.child_container}>
                         <Restaurant 
                         title="Homard en chaud-froid"
-                        source={require("")}>
-
+                        source={require("../../../assets/images/homardRecette.png")}>
                         </Restaurant>
 
                     </SafeAreaView>
 
                     <SafeAreaView style={styles.child_container}>
-
+                        <Text style={styles.description}>Faites cuire le homard dans de l'au bouillante, du thym, du laurier, du sel et du poivre de cayenne.{"\n"}
+                            Laissez cuire 20 minutes. Egouttez-les et laissez-les refroidir.{"\n"}{"\n"}
+                            Découpez les coffres des homards dans le sens de la longueur.{"\n"}{"\n"}
+                            Mélangez la mayonnaise avec le cognac, le corail et la ciboulette ciselée.
+                        </Text>
                     </SafeAreaView>
                 </Background>
             </View>
@@ -34,10 +36,13 @@ const styles = StyleSheet.create({
     },
     child_container: {
         flex: 1,
-        borderWidth: 1,
     },
     subtitle: {
-        textAlign: 'center'
+        textAlign: 'center',
+    },
+    description: {
+        top: 50,
+        textAlign: 'center',
     }
   
   });

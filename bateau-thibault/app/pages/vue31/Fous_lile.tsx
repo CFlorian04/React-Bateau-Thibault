@@ -1,7 +1,7 @@
 import React from "react";
 import Poème from "../../modèles/poème";
 import Background from "../../modèles/background";
-import Restaurant from "../../modèles/restaurant";
+import Restaurant from "../../modèles/présentation";
 
 
 const Fous_lile = () => {

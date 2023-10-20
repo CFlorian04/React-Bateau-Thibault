@@ -1,8 +1,8 @@
-import { View, Text, Image, SafeAreaView, StyleSheet } from "react-native";
+import { View, Text, Image, SafeAreaView, StyleSheet, Dimensions } from "react-native";
 
 const Restaurant = (props) => {
     return (
-        <SafeAreaView>
+        <SafeAreaView style={styles.full_component}>
             <View style={styles.container}>
                 <Text style={styles.text}>
                     {props.title}
@@ -13,6 +13,7 @@ const Restaurant = (props) => {
                 <View style={styles.View_Image}>
                     <Image  style={styles.img}
                     source={props.source}
+                    resizeMode="contain"
                     />
                 </View>
             </SafeAreaView>
@@ -25,19 +26,24 @@ const Restaurant = (props) => {
   export default Restaurant;
   
   export const styles = StyleSheet.create({
+    full_component: {
+      flex: 1,
+    },
 
     img: {
-      width: 550,
-      height: 320,
+      flex: 1,
+      width: "100%",
+      height: "100%",
     },
 
     imageContainer: {
-
+      flex: 1,
     },
 
     View_Image: {
-        flexDirection: 'row',
-        justifyContent: 'center',
+      flex: 1,
+      justifyContent: "center",
+      alignItems: "center",
       },
 
       text: {
