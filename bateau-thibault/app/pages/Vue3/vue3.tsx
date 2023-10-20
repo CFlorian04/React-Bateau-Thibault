@@ -1,85 +1,66 @@
 import React from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import { SafeAreaView, Text, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { styles } from "./vue3.style";
 
 import Liens from "../../modèles/liens";
 import Background from "../../modèles/background";
+import Title from "../../modèles/title";
+import Row from "../../modèles/row";
+import Col from "../../modèles/col";
+import TouchButton from "../../modèles/touchButton";
 
-          {/* Todo Corriger la feuille de style de cette page */}
 
 const RestPartun = () => {
   const navigation = useNavigation();
     return (
-      <Background>
-        <View style={styles.container}>
-          <Text style={styles.text}>Restaurants partenaires</Text>
-        </View>
-        <View style={styles.view2}>
-          <Text style={styles.text1}>
-            Tous les Restaurants partenaires avec le bateau de Thibault
-          </Text>
+      <View style={styles.main_container}>
+        <Background>
+            <Title title="Restaurants partenaires"></Title>
 
-          <Liens></Liens>
+          <SafeAreaView style={styles.child_container}>
+            <Text style={styles.subtitle}>
+              Tous les Restaurants partenaires avec le bateau de Thibault
+            </Text>
+            <Liens></Liens>
+          </SafeAreaView>
 
-        </View>
-        <View style={styles.View_Butth}>
-          <View style={{ flexDirection: "row" }}>
-            <TouchableOpacity
-              style={styles.Butt_BistGas}
-              onPress={() => navigation.navigate("vue30")}
-            >
-              <View style={styles.view_text_Button}>
-                <Text style={styles.text_Button}>Bistrot des Gascons</Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.Butt_BistGas2}
-              onPress={() => navigation.navigate("vue31")}
-            >
-              <View style={styles.view_text_Button}>
-                <Text style={styles.text_Button}>Les fous de l'île</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-          <View style={{ flexDirection: "row", top: 10 }}>
-            <TouchableOpacity
-              style={styles.Butt_BistGas}
-              onPress={() => navigation.navigate("vue32")}
-            >
-              <View style={styles.view_text_Button}>
-                <Text style={styles.text_Button}>Bistrot Landais</Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.Butt_BistGas2}
-              onPress={() => navigation.navigate("vue33")}
-            >
-              <View style={styles.view_text_Button}>
-                <Text style={styles.text_Button}>Villa 9-Trois</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-          <View style={{ flexDirection: "row", top: 20 }}>
-            <TouchableOpacity
-              style={styles.Butt_BistGas}
-              onPress={() => navigation.navigate("vue34")}
-            >
-              <View style={styles.view_text_Button}>
-                <Text style={styles.text_Button}>Bistrot du Sommelier</Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => navigation.navigate("contact")}
-              style={styles.Butt_BistGas2}
-            >
-              <View style={styles.view_text_Button}>
-                <Text style={styles.text_Button}>Devenez partenaire!</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </Background>
+          <SafeAreaView style={styles.child_container}>
+            <View style={styles.buttonsContainer}>
+              <Row>
+                <Col numRows={1}>
+                  <TouchButton onPress={() => navigation.navigate("vue30")} text={"Bistrot des Gascons"}/>
+                </Col>
+
+                <Col numRows={1}>
+                  <TouchButton onPress={() => navigation.navigate("vue31")} text={"Les fous de l'île"}/>
+                </Col>
+              </Row>
+
+              <Row>
+                <Col numRows={1}>
+                  <TouchButton onPress={() => navigation.navigate("vue32")} text={"Bistrot Landais"}/>
+                </Col>
+
+                <Col numRows={1}>
+                  <TouchButton onPress={() => navigation.navigate("vue33")} text={"Villa 9-Trois"}/>
+                </Col>
+              </Row>
+
+              <Row>
+                <Col numRows={1}>
+                  <TouchButton onPress={() => navigation.navigate("vue34")} text={"Bistrot du Sommelier"}/>
+                </Col>
+
+                <Col numRows={1}>
+                  <TouchButton onPress={() => navigation.navigate("contact")} text={"Devenez partenaire!"}/>
+                </Col>
+              </Row>
+            </View>
+
+          </SafeAreaView>
+        </Background>
+      </View>
     );
 }
 export default RestPartun;

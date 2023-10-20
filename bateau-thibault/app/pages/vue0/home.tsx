@@ -1,17 +1,11 @@
-import { SafeAreaView, View, Text, Button, StyleSheet} from "react-native"
+import { SafeAreaView, View, Text, StyleSheet} from "react-native"
 import { useNavigation } from "@react-navigation/native";
 import Liens from "../../modèles/liens";
 import Background from "../../modèles/background";
-
-const Row = ({ children }) => (
-    <View style={styles.row}>{children}</View>
-  )
-  
-  const Col = ({ numRows, children }) => {
-    return  (
-      <View style={styles[`${numRows}col`]}>{children}</View>
-    )
-  }
+import Row from "../../modèles/row";
+import Col from "../../modèles/col";
+import Title from "../../modèles/title";
+import TouchButton from "../../modèles/touchButton";
 
 
 const HomePage = () => {
@@ -23,7 +17,7 @@ const HomePage = () => {
           <Background>
 
             <SafeAreaView style={styles.child_container}>
-                <Text style={styles.title}>Le bateau de Thibault</Text>
+                <Title title="Le bateau de Thibault"></Title>
                 
                 <SafeAreaView style={styles.quarter}>
                   <Text style={styles.getStartedText}>
@@ -36,30 +30,31 @@ const HomePage = () => {
 
             <SafeAreaView style={styles.child_container}>
                 <View style={styles.buttons_container}>
-                <Row>
-                    <Col numRows={2}>
-                    <Button title="Produits et promotions" color="#2d2a2a42"/>
-                    </Col>
-                </Row>
+                  <Row>
+                      <Col numRows={2}>
+                        <TouchButton onPress={() => console.log("None")} text="Produits et promotions"/>
+                      </Col>
+                  </Row>
 
-                <Row>
-                    <Col numRows={2}>
-                    <Button title="Bateaux" color="#2d2a2a42"/>
-                    </Col>
+                  <Row>
+                      <Col numRows={2}>
+                        <TouchButton onPress={() => console.log("None")} text="Bateaux"></TouchButton>
+                      </Col>
 
-                    <Col numRows={2}>
-                    <Button onPress={() => navigation.navigate("vue3")} title="Restaurants" color="#2d2a2a42"/>
-                    </Col>
-                </Row>
+                      <Col numRows={2}>
+                        <TouchButton onPress={() => navigation.navigate("vue3")} text="Restaurants"></TouchButton>
+                      </Col>
+                  </Row>
 
-                <Row>
-                    <Col numRows={1}>
-                    <Button title="Recettes" color="#2d2a2a42"/>
-                    </Col>
-                    <Col numRows={1}>
-                    <Button onPress={() => navigation.navigate("contact")} title="Contact" color="#2d2a2a42"/>
-                    </Col>
-                </Row>
+                  <Row>
+                      <Col numRows={1}>
+                        <TouchButton onPress={() => console.log("None")} text="Recettes"></TouchButton>
+                      </Col>
+
+                      <Col numRows={1}>
+                        <TouchButton onPress={() => navigation.navigate("contact")} text={"Contact"}/>
+                      </Col>
+                  </Row>
                 </View>
             </SafeAreaView>
 
@@ -89,18 +84,6 @@ const HomePage = () => {
         buttons_container: {
           flex: 2,
           marginHorizontal: 20,
-        },
-      
-        row: {
-          flexDirection: 'row',
-        },
-      
-        "1col": {
-          flex: 1,
-        },
-      
-        "2col": {
-          flex: 2,
         },
         // end testing
       
