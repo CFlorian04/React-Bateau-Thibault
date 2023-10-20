@@ -18,7 +18,9 @@ export default Liens;
 export const styles = StyleSheet.create({
 
     linksContainer: {
-
+        top : 50,
+        alignContent : 'center',
+        textAlign : 'center',
     },
   
     links: {

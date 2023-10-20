@@ -26,31 +26,31 @@ const Recettes = () => {
 
                         <Row>
                             <Col numRows={1}>
-                                <TouchButton onPress={() => navigation.navigate("homard")} text={"Homard"}/>
+                                <TouchButton onPress={() => navigation.navigate("homard")} text={"Homard"} image={require("../../../assets/images/homardRecette_icon.png")}/>
                             </Col>
 
                             <Col numRows={1}>
-                                <TouchButton onPress={() => navigation.navigate("stjacques")} text={"St Jacques"}/>
-                            </Col>
-                        </Row>
-
-                        <Row>
-                            <Col numRows={1}>
-                                <TouchButton onPress={() => navigation.navigate("barroti")} text={"Bar"}/>
-                            </Col>
-
-                            <Col numRows={1}>
-                                <TouchButton onPress={() => navigation.navigate("tourteau")} text={"Tourteau"}/>
+                                <TouchButton onPress={() => navigation.navigate("stjacques")} text={"St Jacques"} image={require("../../../assets/images/saintJacques_icon.png")}/>
                             </Col>
                         </Row>
 
                         <Row>
                             <Col numRows={1}>
-                                <TouchButton onPress={() => navigation.navigate("recette_vide")} text={"Recette"}/>
+                                <TouchButton onPress={() => navigation.navigate("barroti")} text={"Bar"} image={require("../../../assets/images/barRecette_icon.png")}/>
                             </Col>
 
                             <Col numRows={1}>
-                                <TouchButton onPress={() => navigation.navigate("recette_vide")} text={"Recette"}/>
+                                <TouchButton onPress={() => navigation.navigate("tourteau")} text={"Tourteau"} image={require("../../../assets/images/poulpe.png")}/>
+                            </Col>
+                        </Row>
+
+                        <Row>
+                            <Col numRows={1}>
+                                <TouchButton onPress={() => navigation.navigate("recette_vide")} text={"Recette"} image={require("../../../assets/images/poulpe.png")}/>
+                            </Col>
+
+                            <Col numRows={1}>
+                                <TouchButton onPress={() => navigation.navigate("recette_vide")} text={"Recette"} image={require("../../../assets/images/poulpe.png")}/>
                             </Col>
                         </Row>
 

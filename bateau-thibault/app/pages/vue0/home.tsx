@@ -48,7 +48,7 @@ const HomePage = () => {
 
                   <Row>
                       <Col numRows={1}>
-                        <TouchButton onPress={() => navigation.navigate("recettes")} text="Recettes"></TouchButton>
+                        <TouchButton onPress={() => navigation.navigate("recettes")} text="Recettes" image={require("../../../assets/images/recette.png")}></TouchButton>
                       </Col>
 
                       <Col numRows={1}>
