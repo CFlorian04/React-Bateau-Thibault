@@ -80,4 +80,11 @@ export const styles = StyleSheet.create({
     fontWeight: "600",
     fontStyle: "italic",
   },
+  buttons_container: {
+    flex: 2,
+    marginHorizontal: 20,
+  },
+  child_container: {
+    flex: 1,
+  },
 });

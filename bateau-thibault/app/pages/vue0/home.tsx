@@ -32,17 +32,17 @@ const HomePage = () => {
                 <View style={styles.buttons_container}>
                   <Row>
                       <Col numRows={2}>
-                        <TouchButton onPress={() => console.log("None")} text="Produits et promotions"/>
+                        <TouchButton onPress={() => console.log("None")} text="Produits et promotions" image={require("../../../assets/images/poisson.png")}/>
                       </Col>
                   </Row>
 
                   <Row>
                       <Col numRows={2}>
-                        <TouchButton onPress={() => console.log("None")} text="Bateaux"></TouchButton>
+                        <TouchButton onPress={() => navigation.navigate("vue2")} text="Bateaux" image={require("../../../assets/images/ancre.png")}></TouchButton>
                       </Col>
 
                       <Col numRows={2}>
-                        <TouchButton onPress={() => navigation.navigate("vue3")} text="Restaurants"></TouchButton>
+                        <TouchButton onPress={() => navigation.navigate("vue3")} text="Restaurants" image={require("../../../assets/images/restaurant.png")}></TouchButton>
                       </Col>
                   </Row>
 
@@ -52,7 +52,7 @@ const HomePage = () => {
                       </Col>
 
                       <Col numRows={1}>
-                        <TouchButton onPress={() => navigation.navigate("contact")} text={"Contact"}/>
+                        <TouchButton onPress={() => navigation.navigate("contact")} text={"Contact"} image={require("../../../assets/images/ancre.png")}/>
                       </Col>
                   </Row>
                 </View>
