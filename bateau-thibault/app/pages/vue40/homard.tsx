@@ -13,7 +13,6 @@ const Homard = () => {
                         title="Homard en chaud-froid"
                         source={require("../../../assets/images/homardRecette.png")}>
                         </Présentation>
-
                     </SafeAreaView>
 
                     <SafeAreaView style={styles.child_container}>

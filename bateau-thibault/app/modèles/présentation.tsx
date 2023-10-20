@@ -1,4 +1,4 @@
-import { View, Text, Image, SafeAreaView, StyleSheet, Dimensions } from "react-native";
+import { View, Text, Image, SafeAreaView, StyleSheet } from "react-native";
 
 const Présentation = (props) => {
     return (

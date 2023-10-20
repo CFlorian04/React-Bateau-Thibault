@@ -1,17 +1,27 @@
 import { SafeAreaView, View, Text, StyleSheet} from "react-native"
 
 import Background from "../../modèles/background";
-import Title from "../../modèles/title";
+import Présentation from "../../modèles/présentation";
+import Poème from "../../modèles/poème";
 
 
 const Tourteau = () => {
 
       return (
-            <View style={styles.main_container}>
-                <Background>
-                    <Title text="Le tourteau du chef"/>
-                </Background>
-            </View>
+        <View style={styles.main_container}>
+        <Background>
+            <SafeAreaView style={styles.child_container}>
+                <Présentation 
+                title="Tourteau linguine"
+                source={require("../../../assets/images/poulpe.png")}>
+                </Présentation>
+            </SafeAreaView>
+
+            <SafeAreaView style={styles.child_container}>
+                <Poème/>
+            </SafeAreaView>
+        </Background>
+    </View>
         )
     }
 
@@ -25,7 +35,11 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     subtitle: {
-        textAlign: 'center'
+        textAlign: 'center',
+    },
+    description: {
+        top: 50,
+        textAlign: 'center',
     }
   
   });
