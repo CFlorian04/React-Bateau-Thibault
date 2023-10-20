@@ -2,18 +2,18 @@ import React from "react";
 
 import Poème from "../../modèles/poème";
 import Background from "../../modèles/background";
-import Restaurant from "../../modèles/présentation";
+import Présentation from "../../modèles/présentation";
 
 
 
 const Vill_Trois = () => {
   return (
     <Background>
-        <Restaurant
+        <Présentation
           title="Villa 9-Trois"
           source={require("../../../assets/images/villa9Trois.png")}
         >
-        </Restaurant>
+        </Présentation>
 
       <Poème></Poème>
     </Background>

@@ -1,7 +1,7 @@
 import { SafeAreaView, View, Text, StyleSheet} from "react-native"
 
 import Background from "../../modèles/background";
-import Restaurant from "../../modèles/présentation";
+import Présentation from "../../modèles/présentation";
 
 const Homard = () => {
 
@@ -9,10 +9,10 @@ const Homard = () => {
             <View style={styles.main_container}>
                 <Background>
                     <SafeAreaView style={styles.child_container}>
-                        <Restaurant 
+                        <Présentation 
                         title="Homard en chaud-froid"
                         source={require("../../../assets/images/homardRecette.png")}>
-                        </Restaurant>
+                        </Présentation>
 
                     </SafeAreaView>
 
