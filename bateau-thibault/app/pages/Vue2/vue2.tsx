@@ -1,10 +1,13 @@
 import React from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import { SafeAreaView, Text, TouchableOpacity, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { styles } from "./vue2.style";
 
 import Liens from "../../modèles/liens";
 import Background from "../../modèles/background";
+import TouchButton from "../../modèles/touchButton";
+import Col from "../../modèles/col";
+import Row from "../../modèles/row";
 
           {/* Todo Corriger la feuille de style de cette page */}
 
@@ -23,62 +26,38 @@ const MenuBateaux = () => {
           <Liens></Liens>
 
         </View>
-        <View style={styles.View_Butth}>
-          <View style={{ flexDirection: "row" }}>
-            <TouchableOpacity
-              style={styles.Butt_BistGas}
-              onPress={() => navigation.navigate("vue20")}
-            >
-              <View style={styles.view_text_Button}>
-                <Text style={styles.text_Button}>De La Brise</Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.Butt_BistGas2}
-              onPress={() => navigation.navigate("vue21")}
-            >
-              <View style={styles.view_text_Button}>
-                <Text style={styles.text_Button}>Saphir</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-          <View style={{ flexDirection: "row", top: 10 }}>
-            <TouchableOpacity
-              style={styles.Butt_BistGas}
-              onPress={() => navigation.navigate("vue22")}
-            >
-              <View style={styles.view_text_Button}>
-                <Text style={styles.text_Button}>Gast Micher</Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.Butt_BistGas2}
-              onPress={() => navigation.navigate("vue23")}
-            >
-              <View style={styles.view_text_Button}>
-                <Text style={styles.text_Button}>Aquilon</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-          <View style={{ flexDirection: "row", top: 20 }}>
-            <TouchableOpacity
-              style={styles.Butt_BistGas}
-              onPress={() => navigation.navigate("contact")}
-            >
-              <View style={styles.view_text_Button}>
-                <Text style={styles.text_Button}>Contact</Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => navigation.navigate("contact")}
-              style={styles.Butt_BistGas2}
-            >
-              <View style={styles.view_text_Button}>
-                <Text style={styles.text_Button}>Contact</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-        </View>
+        <SafeAreaView style={styles.child_container}>
+                <View style={styles.buttons_container}>
+                  <Row>
+                      <Col numRows={2}>
+                        <TouchButton onPress={() => navigation.navigate("vue20")} text="De La Brise" image={require("../../../assets/images/DeLaBrise_icon.png")}/>
+                      </Col>
+                      <Col numRows={2}>
+                        <TouchButton onPress={() => navigation.navigate("vue21")} text="Saphir" image={require("../../../assets/images/Saphir_icon.png")}></TouchButton>
+                      </Col>
+                  </Row>
+
+                  <Row>
+                      <Col numRows={2}>
+                        <TouchButton onPress={() => navigation.navigate("vue22")} text="Gast Micher" image={require("../../../assets/images/GastMicher_icon.png")}></TouchButton>
+                      </Col>
+
+                      <Col numRows={2}>
+                        <TouchButton onPress={() => navigation.navigate("vue23")} text="Aquilon" image={require("../../../assets/images/Aquilon_icon.png")}></TouchButton>
+                      </Col>
+                  </Row>
+
+                  <Row>
+                      <Col numRows={1}>
+                      <TouchButton onPress={() => navigation.navigate("contact")} text={"Contact"} image={require("../../../assets/images/ancre.png")}/>
+                      </Col>
+
+                      <Col numRows={1}>
+                        <TouchButton onPress={() => navigation.navigate("contact")} text={"Contact"} image={require("../../../assets/images/ancre.png")}/>
+                      </Col>
+                  </Row>
+                </View>
+            </SafeAreaView>
       </Background>
     );
 }
