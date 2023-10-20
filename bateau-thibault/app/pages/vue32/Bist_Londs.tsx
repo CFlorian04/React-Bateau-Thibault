@@ -1,34 +1,21 @@
-import React, { Component, useEffect } from "react";
-import {
-  ImageBackground,
-  Image,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
-import { useNavigation } from "@react-navigation/native";
-import { styles } from "./Bist_Londs.style";
+import React from "react";
 
 import Poème from "../../modèles/poème";
+import Background from "../../modèles/background";
+import Restaurant from "../../modèles/restaurant";
 
 
 const Bist_Londs = () => {
   return (
-    <ImageBackground
-      source={require("../../../assets/images/background3.png")} // Replace with the path to your image
-      style={styles.backgroundImage}
-    >
-      <View style={styles.container}>
-        <Text style={styles.text}>Bistrot Landais </Text>
-      </View>
-      <View style={styles.View_Image}>
-        <Image
-          style={styles.img}
+    <Background>
+        <Restaurant
+          title="Bistrot Landais"
           source={require("../../../assets/images/bistrotLandais.png")}
-        />
-      </View>
+        >
+        </Restaurant>
+
       <Poème></Poème>
-    </ImageBackground>
+    </Background>
   );
 };
 export default Bist_Londs;

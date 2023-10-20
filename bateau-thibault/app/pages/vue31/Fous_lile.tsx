@@ -1,33 +1,19 @@
-import React, { Component, useEffect } from "react";
-import {
-  ImageBackground,
-  Image,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
-import { useNavigation } from "@react-navigation/native";
-import { styles } from "./Fous_lile.style";
+import React from "react";
 import Poème from "../../modèles/poème";
+import Background from "../../modèles/background";
+import Restaurant from "../../modèles/restaurant";
 
 
 const Fous_lile = () => {
   return (
-    <ImageBackground
-      source={require("../../../assets/images/background3.png")} // Replace with the path to your image
-      style={styles.backgroundImage}
-    >
-      <View style={styles.container}>
-        <Text style={styles.text}>Les fous de l'ile</Text>
-      </View>
-      <View style={styles.View_Image}>
-        <Image
-          style={styles.img}
+    <Background>
+        <Restaurant
+          title="Les fous de l'île"
           source={require("../../../assets/images/fousDeLIle.png")}
-        />
-      </View>
+        >
+        </Restaurant>
       <Poème></Poème>
-    </ImageBackground>
+    </Background>
   );
 };
 export default Fous_lile;

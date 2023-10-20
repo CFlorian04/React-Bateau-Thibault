@@ -1,11 +1,6 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  backgroundImage: {
-    flex: 1,
-    justifyContent: 'center',
-  },
-
   titleContainer: {
     flex: 1,
     flexDirection: 'column',
@@ -28,10 +23,11 @@ export const styles = StyleSheet.create({
     fontWeight: "500",
     fontStyle: "italic",
     textAlign: 'center',
+    padding: 10,
   },
 
   img: {
-    width: 250,
-    height: 310,
+    width: 150,
+    height: 230,
   },
 });

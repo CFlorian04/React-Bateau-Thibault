@@ -1,19 +1,17 @@
-import React, { Component, useEffect } from "react";
-import { ImageBackground, Text, TouchableOpacity, View } from "react-native";
+import React from "react";
+import { Text, TouchableOpacity, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { styles } from "./vue3.style";
 
 import Liens from "../../modèles/liens";
+import Background from "../../modèles/background";
 
           {/* Todo Corriger la feuille de style de cette page */}
 
 const RestPartun = () => {
   const navigation = useNavigation();
     return (
-      <ImageBackground
-        source={require("../../../assets/images/background3.png")} // Replace with the path to your image
-        style={styles.backgroundImage}
-      >
+      <Background>
         <View style={styles.container}>
           <Text style={styles.text}>Restaurants partenaires</Text>
         </View>
@@ -81,7 +79,7 @@ const RestPartun = () => {
             </TouchableOpacity>
           </View>
         </View>
-      </ImageBackground>
+      </Background>
     );
 }
 export default RestPartun;

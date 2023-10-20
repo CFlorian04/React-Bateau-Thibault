@@ -4,8 +4,6 @@ import { useNavigation } from '@react-navigation/native';
 import NavigationContainerStack from './navigation/navigationContainer';
 
 
-
-
 export default function App() {
   return <NavigationContainerStack/>
 ;}

@@ -1,8 +1,7 @@
 import React from "react";
-import  {Linking, SafeAreaView} from "react-native"
+import  {SafeAreaView} from "react-native"
 
 import {
-  ImageBackground,
   Image,
   Text,
   View,
@@ -10,14 +9,12 @@ import {
 import { styles } from "./contact.style";
 import Poème from "../../modèles/poème";
 import Liens from "../../modèles/liens";
+import Background from "../../modèles/background";
 
 
 const Contact = () => {
   return (
-    <ImageBackground
-      source={require("../../../assets/images/background.png")} // Replace with the path to your image
-      style={styles.backgroundImage}
-    >
+    <Background>
       <View style={styles.titleContainer}>
         <Text style={styles.title}>Le bateau de Thibault</Text>
       </View>
@@ -31,7 +28,7 @@ const Contact = () => {
       </SafeAreaView>
 
       <Poème></Poème>
-    </ImageBackground>
+    </Background>
   );
 };
 export default Contact;
