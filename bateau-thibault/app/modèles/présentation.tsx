@@ -56,7 +56,6 @@ const Présentation = (props) => {
 
       container: {
         flex: 1,
-        // top: 80,
-        // left: 55,
+
       },
   });

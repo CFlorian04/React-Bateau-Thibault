@@ -21,6 +21,7 @@ import SaintJacques from "../app/pages/vue41/saint_jacques";
 import BarRoti from "../app/pages/vue42/bar_roti";
 import Tourteau from "../app/pages/vue43/tourteau";
 import RecetteVide from "../app/pages/vue44/recette_vide";
+import Produits from "../app/pages/vue5/produits";
 
 const Stack = createNativeStackNavigator();
 const NavigationContainerStack = () => {
@@ -46,6 +47,7 @@ const NavigationContainerStack = () => {
         <Stack.Screen name="barroti" component={BarRoti} />
         <Stack.Screen name="tourteau" component={Tourteau} />
         <Stack.Screen name="recette_vide" component={RecetteVide} />
+        <Stack.Screen name="produits" component={Produits} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -32,7 +32,7 @@ const HomePage = () => {
                 <View style={styles.buttons_container}>
                   <Row>
                       <Col numRows={2}>
-                        <TouchButton onPress={() => console.log("None")} text="Produits et promotions" image={require("../../../assets/images/poisson.png")}/>
+                        <TouchButton onPress={() => navigation.navigate("produits")} text="Produits et promotions" image={require("../../../assets/images/poisson.png")}/>
                       </Col>
                   </Row>
 
