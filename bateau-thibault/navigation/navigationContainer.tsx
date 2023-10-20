@@ -15,6 +15,12 @@ import DeLaBrise from "../app/pages/vue20/DeLaBrise";
 import Saphir from "../app/pages/vue21/Saphir";
 import GastMicher from "../app/pages/vue22/GastMicher";
 import Aquilon from "../app/pages/vue23/Aquilon";
+import Recettes from "../app/pages/vue4/recettes";
+import Homard from "../app/pages/vue40/homard";
+import SaintJacques from "../app/pages/vue41/saint_jacques";
+import BarRoti from "../app/pages/vue42/bar_roti";
+import Tourteau from "../app/pages/vue43/tourteau";
+import RecetteVide from "../app/pages/vue44/recette_vide";
 
 const Stack = createNativeStackNavigator();
 const NavigationContainerStack = () => {
@@ -34,6 +40,12 @@ const NavigationContainerStack = () => {
         <Stack.Screen name="vue32" component={Bist_Londs} />
         <Stack.Screen name="vue33" component={Vill_Trois} />
         <Stack.Screen name="vue34" component={Bist_Somm} />
+        <Stack.Screen name="recettes" component={Recettes} />
+        <Stack.Screen name="homard" component={Homard} />
+        <Stack.Screen name="stjacques" component={SaintJacques} />
+        <Stack.Screen name="barroti" component={BarRoti} />
+        <Stack.Screen name="tourteau" component={Tourteau} />
+        <Stack.Screen name="recette_vide" component={RecetteVide} />
       </Stack.Navigator>
     </NavigationContainer>
   );

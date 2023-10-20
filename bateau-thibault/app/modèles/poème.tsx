@@ -25,6 +25,7 @@ export default Poème;
 export const styles = StyleSheet.create({
 
     poème: {
+      // Todo: review
       marginVertical: 50,
       fontSize: 16,
       color: "#000000",

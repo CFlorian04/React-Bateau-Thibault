@@ -16,7 +16,7 @@ const RestPartun = () => {
     return (
       <View style={styles.main_container}>
         <Background>
-            <Title title="Restaurants partenaires"></Title>
+            <Title text="Restaurants partenaires"></Title>
 
           <SafeAreaView style={styles.child_container}>
             <Text style={styles.subtitle}>

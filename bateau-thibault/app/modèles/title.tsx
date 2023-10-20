@@ -2,7 +2,7 @@ import { Text, StyleSheet } from "react-native";
 
 const Title = (props) => {
     return (
-        <Text style={styles.title}>{props.title}</Text>
+        <Text style={styles.title}>{props.text}</Text>
     )
 }
 

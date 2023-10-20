@@ -17,7 +17,7 @@ const HomePage = () => {
           <Background>
 
             <SafeAreaView style={styles.child_container}>
-                <Title title="Le bateau de Thibault"></Title>
+                <Title text="Le bateau de Thibault"></Title>
                 
                 <SafeAreaView style={styles.quarter}>
                   <Text style={styles.getStartedText}>
@@ -48,7 +48,7 @@ const HomePage = () => {
 
                   <Row>
                       <Col numRows={1}>
-                        <TouchButton onPress={() => console.log("None")} text="Recettes"></TouchButton>
+                        <TouchButton onPress={() => navigation.navigate("recettes")} text="Recettes"></TouchButton>
                       </Col>
 
                       <Col numRows={1}>
