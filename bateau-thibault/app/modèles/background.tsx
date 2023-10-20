@@ -1,5 +1,5 @@
 import { ImageBackground, StyleSheet } from "react-native";
-//import { SetStateAction, useState } from "react";
+import { SetStateAction, useState } from "react";
 
 
 
@@ -26,10 +26,10 @@ const onTouchEnd = () => {
   if (isLeftSwipe || isRightSwipe) console.log('swipe', isLeftSwipe ? 'left' : 'right')
   // add your conditional logic here
 }
-
-//  ################ Swipe
 */
-const Background = ({children, swipeIndex}) => {
+//  ################ Swipe
+
+const Background = ({children}) => {
 
   //swipePage = swipeIndex;
 

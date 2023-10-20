@@ -5,7 +5,7 @@ const TouchButton = ({onPress, text, image}) => {
 
     return (
         < Pressable onPress={onPress} style={styles.pressable}>
-            <Image style={styles.img} source={image}/>
+          { image !== undefined || image !== null ? <Image style={styles.img} source={image}/> : null}
             <Text style={styles.pressable_text}>
                 {text}
             </Text>
