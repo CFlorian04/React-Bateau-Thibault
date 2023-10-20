@@ -1,6 +1,6 @@
 import { View, Text, Image, SafeAreaView, StyleSheet, Dimensions } from "react-native";
 
-const Restaurant = (props) => {
+const Présentation = (props) => {
     return (
         <SafeAreaView style={styles.full_component}>
             <View style={styles.container}>
@@ -23,7 +23,7 @@ const Restaurant = (props) => {
 
     );
   };
-  export default Restaurant;
+  export default Présentation;
   
   export const styles = StyleSheet.create({
     full_component: {
