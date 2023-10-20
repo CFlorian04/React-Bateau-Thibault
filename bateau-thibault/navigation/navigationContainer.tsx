@@ -10,6 +10,11 @@ import Vill_Trois from "../app/pages/vue33/Vill_Trois";
 import Bist_Somm from "../app/pages/vue34/Bist_Somm";
 import Contact from "../app/pages/vue1/contact";
 import HomePage from "../app/pages/vue0/home";
+import MenuBateaux from "../app/pages/Vue2/vue2";
+import DeLaBrise from "../app/pages/vue20/DeLaBrise";
+import Saphir from "../app/pages/vue21/Saphir";
+import GastMicher from "../app/pages/vue22/GastMicher";
+import Aquilon from "../app/pages/vue23/Aquilon";
 
 const Stack = createNativeStackNavigator();
 const NavigationContainerStack = () => {
@@ -18,6 +23,11 @@ const NavigationContainerStack = () => {
       <Stack.Navigator screenOptions={{headerShown: false, }}>
         <Stack.Screen name="vue0" component={HomePage}/>
         <Stack.Screen name="contact" component={Contact}/>
+        <Stack.Screen name="vue2" component={MenuBateaux} />
+        <Stack.Screen name="vue20" component={DeLaBrise} />
+        <Stack.Screen name="vue21" component={Saphir} />
+        <Stack.Screen name="vue22" component={GastMicher} />
+        <Stack.Screen name="vue23" component={Aquilon} />
         <Stack.Screen name="vue3" component={RestPartun} />
         <Stack.Screen name="vue30" component={Bistrot_Gascons} />
         <Stack.Screen name="vue31" component={Fous_lile} />
