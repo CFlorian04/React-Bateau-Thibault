@@ -17,6 +17,7 @@ export const styles = StyleSheet.create({
     fontStyle: "italic",
   },
   text1: {
+    textAlign: 'center',
     top: 20,
     fontSize: 14,
     color: "#000000",
