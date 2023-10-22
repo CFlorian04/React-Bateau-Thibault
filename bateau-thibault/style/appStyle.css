@@ -1,0 +1,54 @@
+.container {
+      flex: 1;
+    }
+  
+.container {
+      font-family: 'Satisfy';
+      font-size: 24;
+      text-align: 'center';
+      color: 'white';
+    }
+  
+.links {
+      color: 'black';
+      text-align: 'center'
+    }
+  
+.image {
+      flex: 1;
+      justify-content: 'center';
+    }
+  
+    /* Test uniquement */
+.text {
+      color: 'white';
+      font-size: 42;
+      line-height: 84;
+      font-weight: 'bold';
+      text-align: 'center';
+      background-color: '#000000c0';
+    }
+  
+    /* Grid test */
+.fixToText {
+      flex: 2;
+      flex-direction: 'row';
+      justify-content: 'space-between';
+    }
+  
+.codeHighlightContainer {
+      border-radius: 3;
+      padding-left: 4;
+      padding-right: 4;
+    }
+  
+.homeScreenFilename {
+      margin-left: 7;
+      margin-right: 7;
+    }
+    
+.getStartedText {
+      font-size: 17;
+      line-height: 24;
+      text-align: 'center';
+    }
